@@ -3,11 +3,9 @@ on:
   workflow_call:
     inputs:
       STOREFRONT_DOCKERFILE:
-        required: true
         type: string
 
       MIDDLEWARE_DOCKERFILE:
-        required: true
         type: string
 
       STOREFRONT_BUILDARGS:
