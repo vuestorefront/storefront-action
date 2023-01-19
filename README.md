@@ -55,7 +55,7 @@ on:
 
 jobs:
   Integration:
-    uses: vue-storefront/storefront-action/.github/workflows/storefrontcloud-action.yml@main
+    uses: vuestorefront/storefront-action/.github/workflows/storefrontcloud-action.yml@main
     with:
       # This will be pass to docker parameters --buildargs to make your docker build look environment variables for your storefront application
       STOREFRONT_BUILDARGS: NPM_EMAIL,NPM_PASS,NPM_USER,NPM_REGISTRY,API_BASE_URL,API_SSR_BASE_URL,VSF_API_URI,VSF_API_HOST,VSF_API_AUTH_HOST,VSF_API_CLIENT_ID,VSF_API_CLIENT_SECRET,VSF_API_SCOPES,VSF_SERVER_API_CLIENT_ID,VSF_SERVER_API_CLIENT_SECRET,VSF_SERVER_API_SCOPES,VSF_SERVER_API_OPERATIONS,NUXT_IMAGE_PROVIDER,NUXT_IMAGE_PROVIDER_BASE_URL,SAPCC_MEDIA_HOST,NUXT_IMAGE_PROVIDER_UPLOAD_DIR
