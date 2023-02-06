@@ -4,30 +4,25 @@
 
 ### Requirements
 
-  - **.github/workflows/public_env_info/production** - an env config file that contains all the needed environment variables you need to run your application
+  - **Environment Variables** - multiline string that contains all the needed environment variables you need to run your application.
 
   Example below is a sample for SAP
   ```
   API_BASE_URL=/api/
   API_SSR_BASE_URL=http://additional-app-middleware:8181
-
   SAPCC_MEDIA_HOST=<URL>
   SAPCC_CURRENCY=USD
   SAPCC_LANG=en
-
   SAPCC_API_URI=<URL>
-
   SAPCC_API_CLIENT_ID=vuestorefront
-  SAPCC_API_CLIENT_SECRET=<SECRET>
+  SAPCC_API_CLIENT_SECRET=${{ secrets.SAPCC_API_CLIENT_SECRET }}
   SAPCC_API_BASE_STORE=electronics
   SAPCC_API_BASE_STORE_ID=electronics
   SAPCC_API_CATALOG_ID=electronicsProductCatalog
   SAPCC_API_CATALOG_VERSION=Online
-
   SAPCC_OAUTH_SERVER_HOST=<URL>
   SAPCC_OAUTH_SERVER_AUTHENTICATION_ENDPOINT=/authorizationserver/oauth/token
   SAPCC_OAUTH_SERVER_AUTHENTICATION_TOKEN_REVOKE_ENDPOINT=/authorizationserver/oauth/revoke
-
   NUXT_IMAGE_PROVIDER_BASE_URL=<URL>
   NUXT_IMAGE_PROVIDER_UPLOAD_DIR=sap
   ```
@@ -74,6 +69,24 @@ jobs:
       NPM_USER: ${{ secrets.NPM_USER }}
       NPM_PASS: ${{ secrets.NPM_PASS }}
       NPM_REGISTRY: ${{ secrets.NPM_REGISTRY }}
+      ENV: |
+        API_BASE_URL=/api/
+        API_SSR_BASE_URL=http://additional-app-middleware:8181
+        SAPCC_MEDIA_HOST=<URL>
+        SAPCC_CURRENCY=USD
+        SAPCC_LANG=en
+        SAPCC_API_URI=<URL>
+        SAPCC_API_CLIENT_ID=vuestorefront
+        SAPCC_API_CLIENT_SECRET=${{ secrets.SAPCC_API_CLIENT_SECRET }}
+        SAPCC_API_BASE_STORE=electronics
+        SAPCC_API_BASE_STORE_ID=electronics
+        SAPCC_API_CATALOG_ID=electronicsProductCatalog
+        SAPCC_API_CATALOG_VERSION=Online
+        SAPCC_OAUTH_SERVER_HOST=${{ secrets.SAPCC_OAUTH_SERVER_HOST }}
+        SAPCC_OAUTH_SERVER_AUTHENTICATION_ENDPOINT=/authorizationserver/oauth/token
+        SAPCC_OAUTH_SERVER_AUTHENTICATION_TOKEN_REVOKE_ENDPOINT=/authorizationserver/oauth/revoke
+        NUXT_IMAGE_PROVIDER_BASE_URL=<URL>
+        NUXT_IMAGE_PROVIDER_UPLOAD_DIR=sap
 ```
 
 ## More to domain to add here
