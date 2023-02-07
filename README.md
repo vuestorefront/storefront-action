@@ -4,9 +4,9 @@
 
 ### Requirements
 
-  - **Environment Variables** - multiline string that contains all the needed environment variables you need to run your application.
+  - **Environment Variables** - A multiline string that contains all the necessary environment variables needed to run your application.
 
-  Example below is a sample for SAP
+  An example is provided below for SAP:
   ```
   API_BASE_URL=/api/
   API_SSR_BASE_URL=http://additional-app-middleware:8181
@@ -29,7 +29,7 @@
 
 ### Recommended
 
-- **.vuestorefrontcloud** directory consist the ff
+- **.vuestorefrontcloud** directory should contain the following
   - Dockerfile - for your storefront or nuxt app setup with the correct ARG and ENV needed for your application
   - middleware.Dockerfile - for your middleware server setup with the correct ARG and ENV needed for your application
   - middleware.package.json
@@ -37,7 +37,7 @@
 
 ### Usage
 
-Example below is an example on usage for SAP storefront integration
+An example of usage for SAP storefront integration is provided below:
 
 ```yaml
 # .github/workflows/deploy-vue-storefront-cloud.yml
