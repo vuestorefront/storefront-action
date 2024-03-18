@@ -1,4 +1,4 @@
-# Vue Storefront Build and Deployment Reusable Workflows
+# Alokai Build and Deployment Reusable Workflows
 
 ## Storefront Cloud Action
 
